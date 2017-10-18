@@ -1,0 +1,4 @@
+straight line eq : y = mx + b
+(SSE) Error function = (1/N) (summation(ypred - y)^2) -> for calculating distances
+
+gradient = derivative of SSE with respect to 1. b(intercept), and 2. m(slope)
