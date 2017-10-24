@@ -1,0 +1,67 @@
+famous activation_functions
+---------------------------
+Siraj's Video @ https://www.youtube.com/watch?v=-7scQpJT7uo
+vid @ https://www.youtube.com/watch?v=9vB5nzrL4hY
+
+1. Identity
+==> f(x) = x
+
+2. Binary Step(very useful in Classifers(O/P : 0 or 1))
+==> f(x) = {0 for x < 0 ; 1 for x >= 0
+
+3. Logistic / Sigmoid(very useful in NN (O/P : is always between [0 < value < 1]))
+==> f(x) = 1/(1 + e^-x)
+DisAdv
+------
+1. O/P is NOT ZERO CENTERED
+2. Vanishing gradient problem
+
+4. TanH (similar to Sigmoid (O/P : is always between [-1 < value < 1]))
+==> f(x) = tanh(x) = (2/(1+e^-2x)) - 1
+(we can select any one from Sigmoid & TanH activation function after calculating the accuracy)
+Adv
+---
+1. O/P is ZERO CENTERED
+
+DisAdv
+------
+1. Vanishing gradient problem
+
+
+5. ArcTan(alternate to Sigmoid & TanH) (O/P : is always between [-pi/2 < value < pi/2])
+==> f(x) = tan^-1(x)
+
+
+6. Rectified Linear Unit(ReLU) (popular in Deep Learning & NN)
+==> f(x) = {0 for x < 0 ; x for x >= 0
+Adv
+------
+1. Avoids Vanishing gradient problem
+2. Very fast 6X improvement than olders
+
+DisAdv
+------
+1. some units can be fragile and die, and ll make gradient to be zero from that unit
+
+Note: ReLU is only used of hidden layers, whereas the output layers should use SoftMax function
+
+
+7. Leaky ReLU
+==> f(x) = {0.01x for x < 0 ; x for x >= 0
+Adv
+------
+1. Overcomes the unit die problem
+
+8. Maxout (Generalised form of ReLU & Leaky ReLU)
+
+9. SoftMax Classifier ==> finding outs probability distribution of each output
+
+Reason for using activation functions:
+-------------------------------------
+1. They introduce non linear properties(nonlinearities) to the network, to solve real world challenges.
+2. Activation functions should be differentiable.
+
+Siraj's tips:
+-------------
+1. never ever use sigmoid or tanh
+2. Use ReLU and use Softmax for classification or use Linear for Regression
